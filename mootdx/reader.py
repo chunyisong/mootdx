@@ -112,7 +112,7 @@ class StdReader(ReaderBase):
         """
         symbol = Path(symbol).stem
         subdir = 'fzline' if str(suffix) == '5' else 'minline'
-        suffix = ['lc5', '5'] if str(suffix) == '5' else ['lc1', '1']
+        suffix = ['lc5', '5', '05'] if str(suffix) == '5' else ['lc1', '1', '01']
         symbol = self.find_path(symbol, subdir=subdir, suffix=suffix)
 
         if symbol is not None:

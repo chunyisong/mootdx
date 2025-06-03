@@ -128,6 +128,10 @@ def _holiday():
 
     df.columns = ['日期', '节日', '国家', '交易所']
     df.index = pd.to_datetime(df['日期'].astype('str'), format='%Y%m%d')
+    # 通达信官网的金融假日数据的脏数据上面的行失败
+    # df['日期'] = pd.to_datetime(df['日期'], errors='coerce') # 处理
+    # df_cleaned = df.dropna(subset=['日期'])
+    # df_cleaned.index = pd.to_datetime(df_cleaned['日期'].astype('str'))
 
     if df.empty:
         Path(get_config_path('caches/holiday.plk')).unlink(missing_ok=True)

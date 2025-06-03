@@ -61,7 +61,7 @@ class MooTdxDailyBarReader(TdxDailyBarReader):
             if code_head in ['15', '16', '18']:
                 return 'SZ_FUND'
 
-            if code_head in ['10', '11', '12', '13', '14']:
+            if code_head in ['10', '11', '12', '13', '14', '19']:
                 return 'SZ_BOND'
 
             return 'SZ_OTHER'
@@ -83,7 +83,7 @@ class MooTdxDailyBarReader(TdxDailyBarReader):
                 return 'SH_FUND'
 
             # if code_head in ['01', '10', '11', '12', '13', '14']:
-            if code_head in ['01', '02', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']:
+            if code_head in ['01', '02', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20' '23', '24', '27']:
                 return 'SH_BOND'
 
             return 'SH_OTHER'
