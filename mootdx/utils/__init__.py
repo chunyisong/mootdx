@@ -54,7 +54,7 @@ def get_stock_market(symbol='', string=False):
     elif symbol.startswith(('5', '6', '7', '90', '88', '98', '99')):
         market = 'sh'
     # 83 87 92 都是北交所
-    elif symbol.startswith(('20', '4', '82', '83', '87', '92')):
+    elif symbol.startswith(('20', '43', '82', '83', '87', '92')):
         market = 'bj'
 
     # logger.debug(f"market => {market}")
